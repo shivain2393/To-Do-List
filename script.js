@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
     openDeletePopupBtn.addEventListener("click", deleteCompletedTasks);
   
     function deleteCompletedTasks() {
-      const completedTasks = document.querySelectorAll(".completed");
-  
-      completedTasks.forEach(taskItem => {
-        const listItem = taskItem.parentElement;
-        taskList.removeChild(listItem);
-      });
-    }
+  const completedTasks = document.querySelectorAll(".completed");
+
+  completedTasks.forEach(taskItem => {
+    const listItem = taskItem.closest("li"); 
+    taskList.removeChild(listItem);
+  });
+}
   
     const taskInput = document.getElementById("taskInput");
     const taskTime = document.getElementById("taskTime");
