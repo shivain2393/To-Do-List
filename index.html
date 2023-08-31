@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List App</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+    <div class="input-container">
+      <input type="text" id="taskInput" placeholder="Enter task...">
+      <div class="select-container">
+        <select id="taskTime">
+          <option value="">Select Time</option>
+          <option value="1:00">1:00</option>
+          <option value="2:00">2:00</option>
+          <option value="3:00">3:00</option>
+          <option value="4:00">4:00</option>
+          <option value="5:00">5:00</option>
+          <option value="6:00">6:00</option>
+          <option value="7:00">7:00</option>
+          <option value="8:00">8:00</option>
+          <option value="9:00">9:00</option>
+          <option value="10:00">10:00</option>
+          <option value="11:00">11:00</option>
+          <option value="12:00">12:00</option>
+        </select>
+        <select id="ampm">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+      </div>
+      <button id="addTaskBtn" disabled>Add Task</button>
+      <button id="openDeletePopupBtn">Delete Completed Tasks</button>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+  <div id="overlay" class="hidden"></div>
+  <div id="popup" class="hidden">
+    <h2>Select AM or PM:</h2>
+    <button id="selectAM">AM</button>
+    <button id="selectPM">PM</button>
+  </div>
+  <div id="deletePopup" class="hidden">
+    <h2>Select tasks to delete:</h2>
+    <ul id="popupTaskList"></ul>
+    <button id="confirmDeleteBtn">Delete</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
