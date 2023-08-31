@@ -83,6 +83,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   
-    // Rest of the code remains the same
+    
   });
   
