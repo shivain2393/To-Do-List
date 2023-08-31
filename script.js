@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
     openDeletePopupBtn.addEventListener("click", deleteCompletedTasks);
   
     function deleteCompletedTasks() {
-  const completedTasks = document.querySelectorAll(".completed");
-
-  completedTasks.forEach(taskItem => {
-    const listItem = taskItem.closest("li"); 
-    taskList.removeChild(listItem);
-  });
-}
+        const completedTasks = document.querySelectorAll(".completed");
+      
+        completedTasks.forEach(taskItem => {
+          const listItem = taskItem.closest("li"); // Use closest to get the parent li element
+          taskList.removeChild(listItem);
+        });
+      }
   
     const taskInput = document.getElementById("taskInput");
     const taskTime = document.getElementById("taskTime");
@@ -83,6 +83,5 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   
-    
   });
   
