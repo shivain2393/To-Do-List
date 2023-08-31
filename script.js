@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const completedTasks = document.querySelectorAll(".completed");
       
         completedTasks.forEach(taskItem => {
-          const listItem = taskItem.closest("li"); // Use closest to get the parent li element
+          const listItem = taskItem.closest("li"); 
           taskList.removeChild(listItem);
         });
       }
